@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  color: darkred;
+}
+.hidden,
+.hide {
+  display: none;
+}
+article.wrapper {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  border: 1px solid black;
+  background-color: azure;
+  overflow: auto;
+}
+article.wrapper header div.rules {
+  border: 1px solid blue;
+}
+article.wrapper section {
+  display: block;
+  float: left;
+  width: calc(50% - 2px);
+  border: 1px solid orange;
+}
+article.wrapper section.cpu {
+  border-color: cyan;
+}
+article.wrapper section.player {
+  border-color: magenta;
+}
+article.wrapper section > div {
+  width: calc(50% - 10px);
+  border: 1px dotted orange;
+}
+article.wrapper section > div.right {
+  float: right;
+}
+article.wrapper section > div.left {
+  float: left;
+}
+article.wrapper section > div.info {
+  padding: 10px;
+}
+article.wrapper section > div.card {
+  font-size: 62px;
+  min-height: 220px;
+  padding-top: 18%;
+}
+article.wrapper section > div.card.spades,
+article.wrapper section > div.card.clubs {
+  color: black;
+}
+article.wrapper section > div.card.diamonds,
+article.wrapper section > div.card.hearts {
+  color: red;
+}
+article.wrapper section > div.card.spades span.name:after {
+  content: "\2660";
+}
+article.wrapper section > div.card.diamonds span.name:after {
+  content: "\2666";
+}
+article.wrapper section > div.card.clubs span.name:after {
+  content: "\2663";
+}
+article.wrapper section > div.card.hearts span.name:after {
+  content: "\2665";
+}
+article.wrapper section > div div[data-points]:after {
+  content: attr(data-points);
+  margin: 0 0 0 5px;
+}
+article.wrapper section > div div[data-cards-left]:after {
+  content: attr(data-cards-left);
+  margin: 0 0 0 5px;
+}
+article.wrapper section > div div[data-games-won]:after {
+  content: attr(data-games-won);
+  margin: 0 0 0 5px;
+}
+article.wrapper footer button.draw {
+  margin: 10px;
+  padding: 10px;
+  font-size: 22px;
+}
